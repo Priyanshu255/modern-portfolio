@@ -1,6 +1,6 @@
 "use client";
-import React, { useState } from "react";
-import { motion } from "framer-motion";
+// import React, { useState } from "react";
+// import { motion } from "framer-motion";
 
 import { cn } from "@/lib/utils";
 
@@ -17,25 +17,25 @@ export const PinContainer = ({
   className?: string;
   containerClassName?: string;
 }) => {
-  const [transform, setTransform] = useState(
-    "translateY(0px)"
-  );
+  // const [transform, setTransform] = useState(
+  //   "translateY(0px)"
+  // );
 
-  const onMouseEnter = () => {
-    setTransform("translateY(-5px)");
-  };
-  const onMouseLeave = () => {
-    setTransform("translateY(0px)");
-  };
+  // const onMouseEnter = () => {
+  //   setTransform("translateY(-5px)");
+  // };
+  // const onMouseLeave = () => {
+  //   setTransform("translateY(0px)");
+  // };
 
   return (
     <div
       className={cn(
-        "relative group/pin z-30",
+        "relative  z-30",
         containerClassName
       )}
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
+      // onMouseEnter={onMouseEnter}
+      // onMouseLeave={onMouseLeave}
     >
       <div
         // style={{
@@ -45,11 +45,11 @@ export const PinContainer = ({
         // className="absolute left-1/2 top-1/2 ml-[0.09375rem] mt-4 -translate-x-1/2 -translate-y-1/2"
       >
         <div
-          style={{
-            transform: transform,
-          }}
+          // style={{
+          //   transform: transform,
+          // }}
           // remove  bg-black
-          className=" p-4 flex rounded-2xl duration-300 shadow-[0_8px_16px_rgb(0_0_0/0.4)] border border-white/[0.1] overflow-hidden"
+          className=" p-4 flex rounded-2xl duration-300 shadow-[0_8px_16px_rgb(0_0_0/0.4)] border border-white/[0.1] hover:translate-y-1 overflow-hidden"
         >
           <div className={cn(" relative z-50 h-full", className)}>{children}</div>
         </div>
