@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 
 
 import { BackgroundGradientAnimation } from "./GradientBg";
-import GridGlobe from "./GridGlobe";
+// import GridGlobe from "./GridGlobe";
 import animationData from "@/data/confetti.json";
 import MagicButton from "../MagicButton";
 
@@ -68,8 +68,21 @@ export const BentoGridItem = ({
 
   const handleCopy = () => {
     const text = "priyanshupandit737@gmail.com";
-    navigator.clipboard.writeText(text);
-    setCopied(true);
+    navigator.clipboard.writeText(text)
+    .then(() => {
+      // Set copied to true
+      setCopied(true);
+      // Set a timer to reset copied to false after 1 minute (60000 milliseconds)
+      setTimeout(() => {
+        setCopied(false);
+      }, 10000); // 60000 milliseconds = 1 minute
+    })
+    .catch((err) => {
+      console.error('Failed to copy text: ', err);
+      // Optionally handle the error
+    });
+    // setCopied(true);
+    // reset();
   };
 
   return (
@@ -95,6 +108,7 @@ export const BentoGridItem = ({
             <img
               src={img}
               alt={img}
+              loading="lazy"
               className={cn(imgClassName, "object-cover object-center ")}
             />
           )}
@@ -109,6 +123,7 @@ export const BentoGridItem = ({
               src={spareImg}
               alt={spareImg}
               //   width={220}
+              loading="lazy"
               className="object-cover object-center w-full h-full"
             />
           )}
@@ -142,7 +157,7 @@ export const BentoGridItem = ({
           </div>
 
           {/* --for the github 3d globe */}
-          {id === 2 && <GridGlobe />}
+          {/* {id === 2 && <GridGlobe />} */}
 
           {/* --Tech stack list div */}
           {id === 3 && (

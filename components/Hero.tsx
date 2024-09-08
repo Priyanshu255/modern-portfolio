@@ -57,7 +57,7 @@ const Hero = () => {
           />
 
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hi! I&apos;m <span className="text-purple inline">Priyanshu Pandit</span>, specializing in MERN and Next.js to deliver exceptional digital experiences.
+            Hi! I&apos;m <span className="text-purple inline">Priyanshu Pandit</span>, specializing in <span className="text-purple inline">MERN</span> and <span className="text-purple inline">Next.js</span> to deliver exceptional digital experiences.
           </p>
 
           <a href="#projects">

@@ -1,7 +1,30 @@
 import { FaLocationArrow } from "react-icons/fa6";
-
-import { socialMedia } from "@/data";
+// import { socialMedia } from "@/data";
 import MagicButton from "./MagicButton";
+import { RxGithubLogo } from "react-icons/rx";
+import { SiLeetcode } from "react-icons/si";
+import { AiOutlineLinkedin } from "react-icons/ai";
+
+export const socialMedia = [
+  {
+    id: 1,
+    // img: "/git.svg",
+    icon: <RxGithubLogo size={23} name="GitHub"/>,
+    link: "https://github.com/Priyanshu255/",
+  },
+  {
+    id: 2,
+    // img: "/twit.svg",
+    icon: <SiLeetcode size={23} name="LeetCode"/>,
+    link: "https://leetcode.com/priyanshu_pandit/",
+  },
+  {
+    id: 3,
+    // img: "/link.svg",
+    icon: <AiOutlineLinkedin size={23} name="LinkedIn"/>,
+    link: "https://www.linkedin.com/in/priyanshupandit",
+  },
+];
 
 const Footer = () => {
   return (
@@ -39,12 +62,15 @@ const Footer = () => {
 
         <div className="flex items-center md:gap-3 mt-4 md:mt-0 gap-6">
           {socialMedia.map((info) => (
-            <div
+            <a
               key={info.id}
+              href={info.link}
+              target="blank"
               className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
             >
-              <img src={info.img} alt="icons" width={20} height={20} />
-            </div>
+              {info.icon}
+              {/* <img src={info.img} loading="lazy" alt="icons" width={20} height={20} /> */}
+            </a>
           ))}
         </div>
       </div>
