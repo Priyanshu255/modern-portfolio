@@ -14,35 +14,24 @@ const About = () => {
       </div>
       <div className="flex flex-col-reverse md:flex-row justify-between items-center md:gap-20">
         <p className="pt-5 text-purple">
-          I am a dedicated student at Medicaps University pursuing a Bachelor of
-          Technology in Computer Science and Engineering (B.Tech CSE). With a
-          natural curiosity and a passion for learning, I thrive on exploring
-          new horizons in the world of technology.
-          <br />
-          <br />
-          My coding journey has led me to become proficient in languages such as
-          C, C++, Python, and Java. I&apos;ve also honed my skills in web
-          development, with expertise in HTML, CSS, JavaScript, ReactJS, and the
-          MERN stack.
-          <br />
-          <br />
-          I take pride in my ability to turn ideas into reality, having
-          completed numerous web projects that showcase my creativity and
-          problem-solving skills. My proficiency with Git and GitHub ensures
-          collaborative and efficient development practices.
-          <br />
-          <br />
-          Beyond my current endeavors, I am actively engaged in the exciting
-          field of Machine Learning, always eager to expand my knowledge and
-          explore its potential applications. I am passionate about leveraging
-          technology to make a positive impact on the world and look forward to
-          connecting with like-minded professionals and opportunities in the
-          tech industry.
+        Ah, the classic &quot;About Me&quot; section—where I attempt to summarize my journey from a curious coder to a full-fledged Software Engineer Trainee at DigiValet, all while pretending I didn&apos;t debug the same issue for three hours yesterday. 
+        <br />
+        <br />
+        With a background in Computer Science and Engineering from Medicaps University, I have honed my skills in full-stack development using technologies like Next.js, React, Angular, MERN, TypeScript, and Git/GitHub. My expertise extends beyond writing code; I have a love-hate relationship with CI/CD pipelines, a knack for SEO optimization, and an uncanny ability to make APIs and databases behave (most of the time).
+        <br />
+        <br />
+        Previously, I was an SDE Intern at Zangoh, where I maintained and enhanced multiple company websites, integrated CRM systems, and even dabbled in webhook wizardry. My recent project, SangamVedh, is an event management platform proving that I can, in fact, build something from scratch without breaking the internet.
+        <br />
+        <br />
+        When I&apos;m not busy making web applications (or debugging why they aren&apos;t working), I&apos;m probably learning something new, can be technology, literature or spoken languages, or contemplating whether AI will replace me before I finish this paragraph.
+        <br />
+        <br />
+        Let&apos;s connect—if you enjoy sarcasm and clean code in equal measure.
         </p>
         {/* <div className=" h-full w-full  rounded-full"> */}
         <img
-            className="md:h-[300px] h-[250px] shadow-[10px_10px_60px_15px] shadow-[#362b5ea1] rounded-full brightness-75 s border-4 profile"
-            src="/profilepic.webp"
+            className="md:h-[400px] h-[250px] shadow-[10px_10px_60px_15px] shadow-[#362b5ea1] rounded-full brightness-75 s border-4 profile"
+            src="/profilepic.jpg"
             loading="lazy"
             alt="Profile"
           />

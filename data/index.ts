@@ -51,7 +51,7 @@ export const gridItems = [
 
   {
     id: 5,
-    title: "Currently building a Website for Startup",
+    title: "Currently working as SWE Intern",
     description: "The Inside Scoop",
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
@@ -72,42 +72,33 @@ export const gridItems = [
 ];
 
 export const projects = [
-  // {
-  //   id: 1,
-  //   title: "SangamVedh: Event Management",
-  //   des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-  //   tech: "NextJS, MongoDB, TailwindCSS",
-  //   // img: "/projects/theelite.webp",
-  //   // iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
-  //   link: "https://sangamvedh.vercel.app",
-  // },
+  {
+    // id: 1,
+    title: "SangamVedh: Event Management",
+    des: "Developed a full-stack event management platform which allows users to add, view or purchase an event.",
+    tech: "NextJS, MongoDB, TailwindCSS, Stripe, Clerk",
+    img: "/projects/sangamvedh.webp",
+    // iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
+    link: "https://sangamvedh.vercel.app",
+  },
   {
     // id: 2,
     title: "The Elite International",
-    des: "Developed a full-stack application for a startup company enabling users to make payments and gain access to a Telegram group for forex market insights.",
+    des: "Developed a full-stack application for a startup company enabling users to make payments.",
     tech: "MERN, TailwindCSS, RazorPay, Hostinger(VPS:Ubuntu), formik/yup",
     // img: "/p2.sg",
     img: "/projects/theelite.webp",
     // iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "https://theeliteinternational.com/",
+    link: "",
   },
   {
     // id: 3,
-    title: "Gym Exercise Recommendation",
-    des: "A website that can suggest gym exercises for any body part. A user can search exercises for a target muscle and can get YouTube video suggestions and exercises that target same muscle or uses same equipment.",
+    title: "Gym Website",
+    des: "A website that can give gym exercises for any body part. A user can search exercises for a target muscle and can get YouTube video suggestions and exercises that target same muscle or uses same equipment.",
     tech: "ReactJS, MaterialUI, TailwindCSS, RapidAPI",
     img: "/projects/gymApp.webp",
     // iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
     link: "https://priyanshu255.github.io/Gym-App/",
-  },
-  {
-    // id: 4,
-    title: "React Admin Dashboard",
-    des: "A website that has a fully functional dashboard with different charts, tables, form and calendar. Also have light-dark theme implemented using MaterialUI.",
-    tech: "ReactJS, MaterialUI, formik, yup, react routing, react-icons, Nivo Charts, FullCalender",
-    img: "/projects/reactAdmin.webp",
-    // iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "https://priyanshu255.github.io/React-Admin-Dashboard/",
   },
   {
     // id: 5,
@@ -117,6 +108,15 @@ export const projects = [
     img: "/projects/animation.webp",
     // iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
     link: "https://priyanshu255.github.io/Animations/",
+  },
+  {
+    // id: 4,
+    title: "React Admin Dashboard",
+    des: "A website that has a fully functional dashboard with different charts, tables, form and calendar. Also have light-dark theme implemented using MaterialUI.",
+    tech: "ReactJS, MaterialUI, formik, yup, react routing, react-icons, Nivo Charts, FullCalender",
+    img: "/projects/reactAdmin.webp",
+    // iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
+    link: "https://priyanshu255.github.io/React-Admin-Dashboard/",
   },
   {
     title: "BharatEduColab",
@@ -228,8 +228,17 @@ export const companies = [
 export const workExperience = [
   {
     id: 1,
+    title: "Software Developer Trainee",
+    desc: "Working on technologies like MERN, Angular, GraphQL. Integrating animations on websites using css and svgs. Creating GUI using React.js",
+    company: "Digivalet",
+    duration: "Jan. 2025 - Present",
+    className: "md:col-span-2",
+    thumbnail: "/exp2.svg",
+  },
+  {
+    id: 2,
     title: "SWE Intern: Full Stack Web Developer",
-    desc: "Developed and maintained live websites using Next.js and Strapi, managed CI/CD pipelines to streamline deployment processes, and deployed applications on DigitalOcean. Additionally, integrated Zoho for enhanced CRM and business automation.",
+    desc: "Developed and maintained live websites using Next.js and Strapi, managed CI/CD pipelines to streamline deployment processes, and increased SEO of websites from 75% to 98%. Additionally, integrated Zoho for enhanced CRM and business automation.",
     company: "Zangoh",
     duration: "Jun. 2024 - Aug. 2024",
     className: "md:col-span-2",

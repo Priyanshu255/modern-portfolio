@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { FaLocationArrow } from "react-icons/fa6";
-type item =
-  | {
+type Item = {
       // id: number;
       title: string;
       des: string;
@@ -20,10 +19,10 @@ type item =
       link: string;
     };
 
-const ProjectCard = ({ item, index }: { item: item, index: number }) => {
+const ProjectCard = ({ item, index }: { item: Item, index: number }) => {
   return (
     <div className=" px-4 flex flex-col items-start justify-center lg:mx-10 rounded-2xl duration-200 shadow-md border border-white/[0.1] md:hover:-translate-y-2 overflow-hidden">
-      <div className="relative flex justify-center overflow-hidden h-[18vh] lg:h-[30vh] mb-10 mt-5 md:rounded-md">
+      <div className="relative flex justify-center overflow-hidden h-[10rem] md:h-[13rem] mb-10 mt-5 md:rounded-md">
         {/* {!item?.img && ( */}
           <div
             className=" w-full overflow-hidden lg:rounded-xl"
@@ -37,7 +36,7 @@ const ProjectCard = ({ item, index }: { item: item, index: number }) => {
             src={item.img}
             alt="cover"
             loading="lazy"
-            className="z-10 absolute top-1 w-[98%] md:rounded-md rotate-2 hover:rotate-0 duration-300"
+            className="z-10 absolute top-1 md:rounded-md rotate-2 hover:rotate-0 duration-300"
           />
         )}
       </div>
@@ -80,16 +79,17 @@ const ProjectCard = ({ item, index }: { item: item, index: number }) => {
         ))}
       </div> */}
 
-        <a
+        {<a
           target="blanck"
           href={item.link}
-          className="flex items-center cursor-pointer"
+          className={`flex items-center ${item.link === "" ? "cursor-not-allowed" : "cursor-pointer"}`}
+          style={{pointerEvents: item.link === "" ? "none" : "auto"}}
         >
           <p className="lg:text-lg md:text-xs text-sm text-purple">
             Check Live Site
           </p>
           <FaLocationArrow className="ms-2" color="#CBACF9" />
-        </a>
+        </a>}
         <Link 
           href={`project/${index+1}`}
           className="md:text-xs text-sm text-purple underline"

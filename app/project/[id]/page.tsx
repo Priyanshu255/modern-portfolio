@@ -9,7 +9,7 @@ const ProjectPage = ({ params }: { params: { id: number } }) => {
         <Link href="/#projects" className="underline cursor-pointer text-purple">Home</Link>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-10">
-        <div className="relative overflow-hidden h-[21vh] md:h-[47vh] mb-10 mt-5 rounded-md">
+        <div className="relative overflow-hidden h-[10.5rem] md:h-[19rem] mb-10 mt-5 rounded-md">
           {/* {!item?.img && ( */}
           <div
             className=" w-full overflow-hidden lg:rounded-xl"
