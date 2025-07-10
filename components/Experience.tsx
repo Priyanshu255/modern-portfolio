@@ -44,9 +44,11 @@ const Experience = () => {
                   <p className="text-lg">{card.company} | </p>
                   <p className="font-serif">{card.duration}</p>
                 </div>
-                <p className="text-start text-white-100 mt-3 font-semibold">
-                  {card.desc}
-                </p>
+                <ul className="text-start text-white-100 mt-3 font-semibold list-disc">
+                  {card.desc.map((points, index) => {
+                    return <li className="mb-2 ml-4" key={index}>{points}</li>
+                  })}
+                </ul>
               </div>
             </div>
           </Button>

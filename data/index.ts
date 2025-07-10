@@ -51,7 +51,7 @@ export const gridItems = [
 
   {
     id: 5,
-    title: "Currently working as SWE Intern",
+    title: "Currently working as SDE",
     description: "The Inside Scoop",
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
@@ -228,17 +228,35 @@ export const companies = [
 export const workExperience = [
   {
     id: 1,
-    title: "Software Developer Trainee",
-    desc: "Working on technologies like MERN, Angular, GraphQL. Integrating animations on websites using css and svgs. Creating GUI using React.js",
+    title: "SDE: Full stack Developer",
+    desc: [
+      "Building smart TV apps (Samsung Tizen & LG Pro:Centric) using React, integrating with proprietary APIs for full TV control — enabling scalable, device-agnostic hospitality solutions.",
+      "Contributing to legacy enterprise dashboards built using Angular and Node.js, adding features and resolving bugs in collaboration with senior developers and ship features under agile iterations.",
+    ],
     company: "Digivalet",
-    duration: "Jan. 2025 - Present",
+    duration: "Jul. 2025 - Present",
+    className: "md:col-span-2",
+    thumbnail: "/exp1.svg",
+  },
+  {
+    id: 2,
+    title: "SDE Intern",
+    desc: [
+      " Developed DigiValet Teams App: a custom Microsoft Teams application for reception teams to manage visitor data, visit status, and internal community posts using AWS Amplify Cognito, React & Fluent UI and GraphQL.",
+      "Optimized reaction handling on diverse post types using Apollo Client\'s InMemoryCache for efficient GraphQL state management.",
+      "Built and deployed smart TV apps (Samsung Tizen & LG Pro:Centric) using React, integrating with proprietary APIs for full TV control — enabling scalable, device-agnostic hospitality solutions.",
+      "Contributed to legacy enterprise dashboards built using Angular and Node.js, adding features and resolving bugs in collaboration with senior developers and ship features under agile iterations.",
+    ],
+    company: "Digivalet",
+    duration: "Jan. 2025 - Jun. 2025",
     className: "md:col-span-2",
     thumbnail: "/exp2.svg",
   },
   {
-    id: 2,
+    id: 3,
     title: "SWE Intern: Full Stack Web Developer",
-    desc: "Developed and maintained live websites using Next.js and Strapi, managed CI/CD pipelines to streamline deployment processes, and increased SEO of websites from 75% to 98%. Additionally, integrated Zoho for enhanced CRM and business automation.",
+    desc: ['Maintained and enhanced 3 production-level company websites using Next.js 14 and Strapi CMS.',
+      'Achieved SEO improvement from 72% to 98%. Took ownership of building a webhook-based CI/CD trigger system using DigitalOcean Functions and GitHub Workflows — enabling schema-specific deployment in an unstructured, ambiguous environment.'],
     company: "Zangoh",
     duration: "Jun. 2024 - Aug. 2024",
     className: "md:col-span-2",
