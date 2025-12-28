@@ -1,30 +1,37 @@
+import InkCursor from "@/components/InkCursor";
 import { projects } from "@/data";
 import Link from "next/link";
+
 const ProjectPage = ({ params }: { params: { id: number } }) => {
   const data = projects[params.id - 1];
   return (
     <div className="p-5 md:p-10">
+      <InkCursor />
       <div className="flex items-center justify-between">
-        <h1 className="font-bold lg:text-3xl text-2xl my-5">{data.title}</h1>
-        <Link href="/#projects" className="underline cursor-pointer text-purple">Home</Link>
+        <h1 className="font-bold lg:text-3xl text-xl my-5">{data.title}</h1>
+        <Link
+          href="/#projects"
+          className="underline cursor-pointer text-purple"
+        >
+          Home
+        </Link>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-10">
-        <div className="relative overflow-hidden h-[10.5rem] md:h-[19rem] mb-10 mt-5 rounded-md">
-          {/* {!item?.img && ( */}
-          <div
-            className=" w-full overflow-hidden lg:rounded-xl"
-            style={{ backgroundColor: "#13162D" }}
-          >
-            <img src="/bg.webp" alt="bgimg" loading="lazy" />
-          </div>
-          {/* )} */}
-          {data?.img && (
+        <div className="relative overflow-hidden h-[168px] md:h-[304px] mb-10 mt-5 rounded-md">
+          {data?.img ? (
             <img
               src={data.img}
               alt="cover"
               loading="lazy"
-              className="z-10 absolute top-0 w-full rounded-md -rotate-2 hover:rotate-0 duration-300"
+              className="z-10 absolute top-0 w-full rounded-md duration-300"
             />
+          ) : (
+            <div
+              className=" w-full overflow-hidden lg:rounded-xl"
+              style={{ backgroundColor: "#13162D" }}
+            >
+              <img src="/bg.webp" alt="bgimg" loading="lazy" />
+            </div>
           )}
         </div>
         <div className="">

@@ -1,8 +1,8 @@
 export const navItems = [
   { name: "Home", link: "#home" },
   { name: "About", link: "/about" },
-  { name: "Projects", link: "#projects" },
   { name: "Experience", link: "#experience" },
+  { name: "Projects", link: "#projects" },
   // { name: "Testimonials", link: "#testimonials" },
   { name: "Contact", link: "#contact" },
 ];
@@ -118,18 +118,18 @@ export const projects = [
     // iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
     link: "https://priyanshu255.github.io/React-Admin-Dashboard/",
   },
-  {
-    title: "BharatEduColab",
-    des: "Developed a full-stack platform with 4 team members for underprivileged students to upload projects, receive mentorship, secure job opportunities, and find investors.",
-    tech: "MERN, TailwindCSS",
-    link: "https://github.com/Priyanshu255/BharatEduCollab",
-  },
-  {
-    title: "Hospital Management System",
-    des: "This project uses connector to connect Python and MySQL. And can-do operations like adding new data, updating, deleting and searching the data. It can also generate the receipt (with amount) for the checkout.",
-    tech: "Python, SQL, MySQL, VS Code",
-    link: "https://github.com/Priyanshu255/Hotel-Management-System",
-  },
+  // {
+  //   title: "BharatEduColab",
+  //   des: "Developed a full-stack platform with 4 team members for underprivileged students to upload projects, receive mentorship, secure job opportunities, and find investors.",
+  //   tech: "MERN, TailwindCSS",
+  //   link: "https://github.com/Priyanshu255/BharatEduCollab",
+  // },
+  // {
+  //   title: "Hospital Management System",
+  //   des: "This project uses connector to connect Python and MySQL. And can-do operations like adding new data, updating, deleting and searching the data. It can also generate the receipt (with amount) for the checkout.",
+  //   tech: "Python, SQL, MySQL, VS Code",
+  //   link: "https://github.com/Priyanshu255/Hotel-Management-System",
+  // },
   {
     // id: 6,
     title: "Calculator",
@@ -230,8 +230,8 @@ export const workExperience = [
     id: 1,
     title: "SDE: Full stack Developer",
     desc: [
+      "Contributed to legacy enterprise dashboards built using MERN and MEAN stacks, adding features and resolving bugs in collaboration with team and ship features under agile iterations.",
       "Building smart TV apps (Samsung Tizen & LG Pro:Centric) using React, integrating with proprietary APIs for full TV control — enabling scalable, device-agnostic hospitality solutions.",
-      "Contributing to legacy enterprise dashboards built using Angular and Node.js, adding features and resolving bugs in collaboration with senior developers and ship features under agile iterations.",
     ],
     company: "Digivalet",
     duration: "Jul. 2025 - Present",
@@ -242,10 +242,9 @@ export const workExperience = [
     id: 2,
     title: "SDE Intern",
     desc: [
-      " Developed DigiValet Teams App: a custom Microsoft Teams application for reception teams to manage visitor data, visit status, and internal community posts using AWS Amplify Cognito, React & Fluent UI and GraphQL.",
-      "Optimized reaction handling on diverse post types using Apollo Client\'s InMemoryCache for efficient GraphQL state management.",
+      " Developed DigiValet Teams App: a custom Microsoft Teams application for reception teams to manage visitor data, visit status, and internal community posts using AWS Amplify Cognito, React & Fluent UI and GraphQL. Optimized reaction handling on diverse post types using Apollo Client's InMemoryCache for efficient GraphQL state management.",
+      "Contributed to legacy enterprise dashboards built using MERN and MEAN stacks, adding features and resolving bugs in collaboration with team and ship features under agile iterations.",
       "Built and deployed smart TV apps (Samsung Tizen & LG Pro:Centric) using React, integrating with proprietary APIs for full TV control — enabling scalable, device-agnostic hospitality solutions.",
-      "Contributed to legacy enterprise dashboards built using Angular and Node.js, adding features and resolving bugs in collaboration with senior developers and ship features under agile iterations.",
     ],
     company: "Digivalet",
     duration: "Jan. 2025 - Jun. 2025",
@@ -255,8 +254,10 @@ export const workExperience = [
   {
     id: 3,
     title: "SWE Intern: Full Stack Web Developer",
-    desc: ['Maintained and enhanced 3 production-level company websites using Next.js 14 and Strapi CMS.',
-      'Achieved SEO improvement from 72% to 98%. Took ownership of building a webhook-based CI/CD trigger system using DigitalOcean Functions and GitHub Workflows — enabling schema-specific deployment in an unstructured, ambiguous environment.'],
+    desc: [
+      "Maintained and enhanced 3 production-level company websites using Next.js 14 and Strapi CMS.",
+      "Achieved SEO improvement from 72% to 98%. Took ownership of building a webhook-based CI/CD trigger system using DigitalOcean Functions and GitHub Workflows — enabling schema-specific deployment in an unstructured, ambiguous environment.",
+    ],
     company: "Zangoh",
     duration: "Jun. 2024 - Aug. 2024",
     className: "md:col-span-2",

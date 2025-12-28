@@ -9,19 +9,19 @@ export const socialMedia = [
   {
     id: 1,
     // img: "/git.svg",
-    icon: <RxGithubLogo size={23} name="GitHub"/>,
+    icon: <RxGithubLogo size={23} name="GitHub" />,
     link: "https://github.com/Priyanshu255/",
   },
   {
     id: 2,
     // img: "/twit.svg",
-    icon: <SiLeetcode size={23} name="LeetCode"/>,
+    icon: <SiLeetcode size={23} name="LeetCode" />,
     link: "https://leetcode.com/priyanshu_pandit/",
   },
   {
     id: 3,
     // img: "/link.svg",
-    icon: <AiOutlineLinkedin size={23} name="LinkedIn"/>,
+    icon: <AiOutlineLinkedin size={23} name="LinkedIn" />,
     link: "https://www.linkedin.com/in/priyanshupandit",
   },
 ];
@@ -47,7 +47,7 @@ const Footer = () => {
           Reach out to me today and let&apos;s discuss how I can help you
           achieve your goals.
         </p>
-        <a href="mailto:priyanshupandit737@gmail.com">
+        <a href="/contact">
           <MagicButton
             title="Let's get in touch"
             icon={<FaLocationArrow />}
@@ -57,7 +57,7 @@ const Footer = () => {
       </div>
       <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
         <p className="md:text-base text-sm md:font-normal font-light">
-          Copyright © 2025 Priyanshu Pandit
+          Copyright © 2026 Priyanshu Pandit
         </p>
 
         <div className="flex items-center md:gap-3 mt-4 md:mt-0 gap-6">

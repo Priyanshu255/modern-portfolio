@@ -2,10 +2,9 @@ import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
 
 // Also install this npm i --save-dev @types/react-lottie
-import Lottie from "react-lottie";
+// import Lottie from "react-lottie";
 
 import { cn } from "@/lib/utils";
-
 
 import { BackgroundGradientAnimation } from "./GradientBg";
 // import GridGlobe from "./GridGlobe";
@@ -53,7 +52,7 @@ export const BentoGridItem = ({
   spareImg?: string;
 }) => {
   const leftLists = ["Angular", "MERN", "Typescript"];
-  const rightLists = ["MongoDB", "NextJS", "GraphQL"];
+  const rightLists = ["MySQL", "NextJS", "GraphQL"];
 
   const [copied, setCopied] = useState(false);
 
@@ -68,19 +67,20 @@ export const BentoGridItem = ({
 
   const handleCopy = () => {
     const text = "priyanshupandit737@gmail.com";
-    navigator.clipboard.writeText(text)
-    .then(() => {
-      // Set copied to true
-      setCopied(true);
-      // Set a timer to reset copied to false after 1 minute (60000 milliseconds)
-      setTimeout(() => {
-        setCopied(false);
-      }, 10000); // 60000 milliseconds = 1 minute
-    })
-    .catch((err) => {
-      console.error('Failed to copy text: ', err);
-      // Optionally handle the error
-    });
+    navigator.clipboard
+      .writeText(text)
+      .then(() => {
+        // Set copied to true
+        setCopied(true);
+        // Set a timer to reset copied to false after 1 minute (60000 milliseconds)
+        setTimeout(() => {
+          setCopied(false);
+        }, 10000); // 60000 milliseconds = 1 minute
+      })
+      .catch((err) => {
+        console.error("Failed to copy text: ", err);
+        // Optionally handle the error
+      });
     // setCopied(true);
     // reset();
   };
@@ -115,8 +115,9 @@ export const BentoGridItem = ({
         </div>
         {/* Tech enthusiast background */}
         <div
-          className={`absolute right-0 -bottom-5 ${id === 5 && "w-full opacity-80"
-            } `}
+          className={`absolute right-0 -bottom-5 ${
+            id === 5 && "w-full opacity-80"
+          } `}
         >
           {spareImg && (
             <img
@@ -196,12 +197,13 @@ export const BentoGridItem = ({
               {/* --remove focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 */}
               {/* --add handleCopy() for the copy the text */}
               <div
-                className={`absolute -bottom-5 right-0 ${copied ? "block" : "block"
-                  }`}
+                className={`absolute -bottom-5 right-0 ${
+                  copied ? "block" : "block"
+                }`}
               >
-                {/* --<img src="/confetti.gif" alt="confetti" /> */}
+                {/* <img src="/confetti.gif" alt="confetti" /> */}
                 {/* --effect by click */}
-                <Lottie options={defaultOptions} height={200} width={400} />
+                {/* <Lottie options={defaultOptions} height={200} width={400} /> */}
               </div>
 
               <MagicButton

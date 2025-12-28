@@ -20,10 +20,13 @@ const CustomCursor = () => {
       if (cursorOutline) {
         // cursorOutline.style.left = `${posX}px`;
         // cursorOutline.style.top = `${posY}px`;
-        cursorOutline.animate({
+        cursorOutline.animate(
+          {
             left: `${posX}px`,
-            top: `${posY}px`
-        }, {duration: 500, fill: "forwards"});
+            top: `${posY}px`,
+          },
+          { duration: 500, fill: "forwards" }
+        );
       }
     };
 
