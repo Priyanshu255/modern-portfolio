@@ -2,16 +2,17 @@ import type { Metadata } from "next";
 import { Audiowide } from "next/font/google";
 // import { Righteous } from "next/font/google";
 // import { Tilt_Neon } from "next/font/google";
+import { Oxanium } from "next/font/google";
 
 import "./globals.css";
 import { ThemeProvider } from "./provider";
 
-const inter = Audiowide({ weight: "400", subsets: ["latin"] });
+const inter = Oxanium({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Priyanshu Pandit",
   description: "Hi There! This is my portfolio website.",
-  applicationName: "Priyanshu Pandit"
+  applicationName: "Priyanshu Pandit",
 };
 
 export default function RootLayout({

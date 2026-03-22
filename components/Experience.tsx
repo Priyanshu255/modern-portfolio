@@ -41,10 +41,17 @@ const Experience = () => {
                   {card.title}
                 </h1>
                 <div className="flex justify-start items-baseline gap-2">
-                  <p className="text-lg">{card.company} | </p>
+                  <a
+                    href={card.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-lg"
+                  >
+                    {card.company}
+                  </a>
                   <p className="font-serif">{card.duration}</p>
                 </div>
-                <ul className="text-start text-white-100 mt-3 font-semibold list-disc">
+                <ul className="text-start text-white-100 mt-3 font-semibold text-[15px] list-disc">
                   {card.desc.map((points, index) => {
                     return (
                       <li className="mb-2 ml-4" key={index}>
