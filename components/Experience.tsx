@@ -29,7 +29,7 @@ const Experience = () => {
             // remove bg-white dark:bg-slate-900
             className="flex-1 text-black dark:text-white border-neutral-200 dark:border-slate-800"
           >
-            <div className="flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 lg:p-10 gap-2">
+            <div className="flex lg:flex-row flex-col lg:items-center p-4 py-6 md:p-5 lg:p-10 gap-2">
               {/* <img
                 src={card.thumbnail}
                 alt={card.thumbnail}
@@ -37,10 +37,10 @@ const Experience = () => {
                 className="lg:w-32 md:w-20 w-16"
               /> */}
               <div className="lg:ms-5">
-                <h1 className="text-start text-xl md:text-2xl font-bold text-purple">
+                <h1 className="text-start text-2xl md:text-2xl font-bold text-[#F8FAFC]">
                   {card.title}
                 </h1>
-                <div className="flex justify-start items-baseline gap-2">
+                <div className="flex justify-start items-baseline gap-2 text-[#AEB8D0]">
                   <a
                     href={card.link}
                     target="_blank"
@@ -51,11 +51,22 @@ const Experience = () => {
                   </a>
                   <p className="font-serif">{card.duration}</p>
                 </div>
-                <ul className="text-start text-white-100 mt-3 font-semibold text-[15px] list-disc">
+                <ul className="text-start text-[#D1D7E6] mt-3 font-normal text-md md:text-base list-disc">
                   {card.desc.map((points, index) => {
                     return (
-                      <li className="mb-2 ml-4" key={index}>
-                        {points}
+                      <li className="mb-2 ml-4 leading-relaxed" key={index}>
+                        {points.map((segment, i) => (
+                          <span
+                            key={i}
+                            className={
+                              segment?.highlight
+                                ? "font-semibold text-white"
+                                : ""
+                            }
+                          >
+                            {segment.text}
+                          </span>
+                        ))}
                       </li>
                     );
                   })}

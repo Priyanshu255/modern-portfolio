@@ -23,7 +23,7 @@ const RecentProjects = () => {
             className="flex items-center justify-center lg:mx-10"
             key={index}
           >
-            <ProjectCard item={item} index={index} />
+            <ProjectCard item={item} />
           </div>
         ))}
       </div>

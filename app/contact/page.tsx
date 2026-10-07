@@ -7,6 +7,7 @@ import InkCursor from "@/components/InkCursor";
 import MagicButton from "@/components/MagicButton";
 import { FaLocationArrow } from "react-icons/fa6";
 import { contactSchema } from "@/lib/validations/contact";
+import FooterBar from "@/components/ui/FooterBar";
 
 export default function ContactForm() {
   const [errors, setErrors] = useState<Record<string, string[]>>({});
@@ -20,7 +21,7 @@ export default function ContactForm() {
 
   function validateField<Key extends keyof typeof values>(
     field: Key,
-    value: string
+    value: string,
   ) {
     const partial = {
       ...values,
@@ -87,7 +88,7 @@ export default function ContactForm() {
     >
       <InkCursor />
       <div className="flex items-center justify-between w-full my-5">
-        <Link href="/" className="underline cursor-pointer text-purple">
+        <Link href="/" className="underline cursor-pointer text-neutral-50">
           Back to Home
         </Link>
       </div>
@@ -98,7 +99,7 @@ export default function ContactForm() {
           const formData = new FormData(e.currentTarget);
           handleSubmit(formData);
         }}
-        className="w-full h-full flex flex-col items-center mt-20 md:mt-0 md:justify-center gap-5"
+        className="w-full h-full flex flex-col items-center md:mt-0 md:justify-center gap-5"
       >
         <div className="w-full">
           <input
@@ -167,6 +168,7 @@ export default function ContactForm() {
           disabled={loading}
         />
       </form>
+      <FooterBar />
     </div>
   );
 }

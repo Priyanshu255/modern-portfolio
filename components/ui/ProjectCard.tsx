@@ -1,28 +1,19 @@
 import Link from "next/link";
 import { FaLocationArrow } from "react-icons/fa6";
-type Item =
-  | {
-      // id: number;
-      title: string;
-      des: string;
-      tech: string;
-      //   iconLists: string[];
-      link: string;
-      img?: undefined;
-    }
-  | {
-      // id: number;
-      title: string;
-      des: string;
-      img: string;
-      tech: string;
-      //   iconLists: string[];
-      link: string;
-    };
+import Chip from "./Chip";
+import { RxGithubLogo } from "react-icons/rx";
+type Item = {
+  title: string;
+  des: string;
+  img: string;
+  tech: string[];
+  link: string;
+  githubLink?: string;
+};
 
-const ProjectCard = ({ item, index }: { item: Item; index: number }) => {
+const ProjectCard = ({ item }: { item: Item }) => {
   return (
-    <div className=" px-4 flex flex-col md:flex-row items-start md:gap-10 justify-start w-full rounded-2xl duration-200 shadow-md border border-white/[0.1] md:hover:-translate-y-1 overflow-hidden bg-[#1119285c]">
+    <div className="relative px-4 flex flex-col md:flex-row items-start md:gap-10 justify-start w-full rounded-2xl duration-200 shadow-md border border-white/[0.1] md:hover:-translate-y-1 overflow-hidden bg-[#1119285c]">
       <div className="relative flex justify-center overflow-hidden h-[10rem] md:h-[13rem] w-full md:w-[450px] md:flex-shrink-0 my-5 rounded-md">
         {/* {!item?.img && ( */}
         {/* <div
@@ -45,29 +36,24 @@ const ProjectCard = ({ item, index }: { item: Item; index: number }) => {
 
       <div className="my-5 flex flex-col justify-between h-full">
         <div>
-          <h1 className="font-bold lg:text-xl md:text-xl text-base line-clamp-1">
+          <h1 className="font-extrabold md:text-2xl text-xl line-clamp-1 text-[#F8FAFC]">
             {item.title}
           </h1>
 
-          <p
-            className="text-[15px]"
-            style={{
-              color: "#BEC1DD",
-              margin: "1vh 0",
-            }}
-          >
+          <p className="text-md font-normal text-[#D1D7E6] my-[1vh]">
             {item.des}
           </p>
-          <p
-            className="text-[15px] mb-5"
-            style={{
-              color: "#BEC1DD",
-              //   margin: "1vh 0",
-            }}
+          {/* <p
+            className="text-md mb-5 text-white-200"
           >
             <b className="font-bold mr-2">Tech Stack:</b>
             {item.tech}
-          </p>
+          </p> */}
+          <div className="flex flex-wrap gap-1 pb-4">
+            {item.tech.map((item, index) => (
+              <Chip text={item} key={index} />
+            ))}
+          </div>
 
           {/* <div className="flex items-center justify-between w-full mt-7 mb-3">
             <div className="flex items-center">
@@ -87,7 +73,7 @@ const ProjectCard = ({ item, index }: { item: Item; index: number }) => {
         </div>
         {item.link !== "" ? (
           <a
-            target="blanck"
+            target="_blank"
             href={item.link}
             className={`flex items-center cursor-pointer`}
             style={{ pointerEvents: item.link === "" ? "none" : "auto" }}
@@ -109,6 +95,17 @@ const ProjectCard = ({ item, index }: { item: Item; index: number }) => {
           More Details
         </Link> */}
       </div>
+      {item?.githubLink && (
+        <div className=" absolute bottom-4 right-4">
+          <a
+            href={item.githubLink}
+            target="_blank"
+            className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
+          >
+            <RxGithubLogo size={23} name="GitHub" />
+          </a>
+        </div>
+      )}
     </div>
   );
 };

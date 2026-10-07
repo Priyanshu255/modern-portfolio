@@ -11,7 +11,7 @@ const inter = Oxanium({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Priyanshu Pandit",
-  description: "Hi There! This is my portfolio website.",
+  description: "Hi There! Have a look at my portfolio website.",
   applicationName: "Priyanshu Pandit",
 };
 

@@ -3,6 +3,16 @@ import { FaLocationArrow } from "react-icons/fa6";
 import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
+import Chip from "./ui/Chip";
+
+const techStacks = [
+  "React",
+  "Angular",
+  "TypeScript",
+  "Next.js",
+  "GraphQL",
+  "NestJS",
+];
 
 const Hero = () => {
   return (
@@ -41,7 +51,7 @@ const Hero = () => {
       </div>
 
       <div className="flex justify-center relative my-20 z-10">
-        <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
+        <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-start md:justify-center">
           {/* <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
             Dynamic Web Magic with Next.js
           </p> */}
@@ -51,12 +61,12 @@ const Hero = () => {
            *
            *  change md:text-6xl, add more responsive code
            */}
-          <TextGenerateEffect
+          {/* <TextGenerateEffect
             words="Transforming Concepts into Seamless User Experiences"
-            className="text-center text-[40px] md:text-5xl lg:text-5xl"
-          />
+            className="text-center text-[20px] md:text-5xl lg:text-5xl"
+          /> */}
 
-          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
+          {/* <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
             Hi! I&apos;m{" "}
             <span className="text-purple inline text-2xl md:text-3xl">
               Priyanshu Pandit
@@ -65,15 +75,42 @@ const Hero = () => {
             <span className="text-purple inline">MERN/MEAN</span> and{" "}
             <span className="text-purple inline">Next.js</span> to deliver
             exceptional digital experiences.
-          </p>
+          </p> */}
 
-          <a href="#projects">
-            <MagicButton
-              title="Show my work"
-              icon={<FaLocationArrow />}
-              position="right"
-            />
-          </a>
+          <h1 className="text-white text-left text-4xl md:text-6xl font-semibold">
+            Priyanshu Pandit
+          </h1>
+          <h3 className="text-[#C4A5FF] text-center text-sm md:text-lg font-semibold pt-2">
+            Software Engineer · Frontend / Full Stack
+          </h3>
+          <TextGenerateEffect
+            words="Software Engineer with nearly 2 years of experience developing production web applications, enterprise dashboards, and interactive interfaces across the frontend and full stack."
+            className="text-center font-normal text-base md:text-lg pt-6"
+          />
+
+          {/* Techstack chips */}
+          <div className="flex flex-wrap justify-center gap-1 pb-32">
+            {techStacks.map((item, index) => (
+              <Chip text={item} key={index} />
+            ))}
+          </div>
+
+          <div className="flex flex-col md:flex-row gap-5">
+            <a href="#projects">
+              <MagicButton
+                title="Show my work"
+                icon={<FaLocationArrow />}
+                position="right"
+              />
+            </a>
+            <a href="/resume">
+              <MagicButton
+                title="View my resume"
+                icon={<FaLocationArrow />}
+                position="right"
+              />
+            </a>
+          </div>
         </div>
       </div>
     </div>

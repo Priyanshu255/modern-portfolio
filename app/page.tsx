@@ -12,6 +12,7 @@ import RecentProjects from "@/components/RecentProjects";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 // import CustomCursor from "@/components/CustomCursor";
 import InkCursor from "@/components/InkCursor";
+import About from "@/components/About";
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
         <FloatingNav navItems={navItems} />
         <Hero />
         <Grid />
+        <About />
         <Experience />
         <RecentProjects />
         {/* <Clients /> */}

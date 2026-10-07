@@ -25,7 +25,7 @@ const Projects = () => {
       <div className="grid grid-cols-1  md:p-4 gap-4 my-10 md:mx-20">
         {projects.map((item, index) => (
           <div className="flex items-center justify-center" key={index}>
-            <ProjectCard item={item} index={index} />
+            <ProjectCard item={item} />
           </div>
         ))}
       </div>
